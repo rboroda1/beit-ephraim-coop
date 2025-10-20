@@ -7,42 +7,42 @@ function Rooms() {
     const rooms = [
         {
             id: 1,
-            title: "Single Room",
+            title: "201",
             description: "Cozy private space perfect for studying and relaxing",
             features: ["Private bedroom", "Shared bathroom", "Desk and storage", "Natural light"],
             src: "single-room" // Placeholder - you'll add actual images
         },
         {
             id: 2,
-            title: "Double Room",
+            title: "402",
             description: "Shared room with a roommate, great for building friendships",
             features: ["Two beds", "Shared space", "Double the storage", "Built-in community"],
             src: "double-room"
         },
         {
             id: 3,
-            title: "Common Kitchen",
+            title: "303",
             description: "Heart of the Bayit where all the cooking magic happens",
             features: ["Full appliances", "Ample counter space", "Community dining", "Pantry storage"],
             src: "kitchen"
         },
         {
             id: 4,
-            title: "Study Lounge",
+            title: "504",
             description: "Quiet space for focused work and group study sessions",
             features: ["Comfortable seating", "Good lighting", "Whiteboards", "Quiet atmosphere"],
             src: "study-lounge"
         },
         {
             id: 5,
-            title: "Common Room",
+            title: "605",
             description: "Social hub for movie nights, games, and hanging out",
             features: ["Comfy couches", "Entertainment setup", "Game storage", "Social atmosphere"],
             src: "common-room"
         },
         {
             id: 6,
-            title: "Bathroom",
+            title: "506",
             description: "Clean, well-maintained shared bathroom facilities",
             features: ["Multiple stalls", "Good lighting", "Storage space", "Regular cleaning"],
             src: "bathroom"

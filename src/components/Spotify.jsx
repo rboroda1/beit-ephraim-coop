@@ -11,16 +11,15 @@ function Spotify() {
 
                 <div className="playlist-container">
                     <div className="playlist-embed">
-                        {/* Replace this src with your actual Spotify playlist embed URL */}
                         <iframe
-                            src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M?utm_source=generator&theme=0"
+                            src="https://open.spotify.com/embed/playlist/0U8mGWbNcItfcb9faGmdeh?utm_source=generator"
                             width="100%"
                             height="352"
                             frameBorder="0"
                             allowfullscreen=""
                             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                             loading="lazy"
-                            title="Bayit Community Playlist"
+                            title="Bayit Bops"
                         ></iframe>
                     </div>
 
