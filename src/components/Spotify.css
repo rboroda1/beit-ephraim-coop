@@ -1,0 +1,68 @@
+.spotify {
+  padding: 3rem 0;
+  background: #f8fdf8;
+}
+
+.spotify h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2c5530;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.spotify-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.playlist-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.playlist-embed {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.playlist-embed iframe {
+  border-radius: 12px;
+}
+
+.playlist-info {
+  text-align: center;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e8f5e8;
+}
+
+.playlist-info p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .spotify {
+    padding: 2rem 0;
+  }
+
+  .spotify h2 {
+    font-size: 1.5rem;
+  }
+
+  .playlist-container {
+    margin: 0 1rem;
+  }
+
+  .playlist-info {
+    padding: 1rem;
+  }
+}

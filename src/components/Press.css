@@ -1,0 +1,149 @@
+.press {
+  padding: 5rem 0;
+  background: white;
+}
+
+.press h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c5530;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.press-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.articles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.article-card {
+  background: #f8fdf8;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e8f5e8;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.article-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(44, 85, 48, 0.15);
+}
+
+.article-type {
+  display: inline-block;
+  background: #6b8e23;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.article-title {
+  color: #2c5530;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.article-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.publication {
+  color: #6b8e23;
+  font-weight: 500;
+}
+
+.date {
+  color: #666;
+}
+
+.article-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  color: #2c5530;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  color: #1e3a21;
+  transform: translateX(5px);
+}
+
+.press-contact {
+  background: #f8fdf8;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e8f5e8;
+}
+
+.press-contact h3 {
+  color: #2c5530;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.press-contact p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.press-contact a {
+  color: #6b8e23;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.press-contact a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .press {
+    padding: 3rem 0;
+  }
+
+  .press h2 {
+    font-size: 2rem;
+  }
+
+  .articles-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .article-card {
+    padding: 1.5rem;
+  }
+
+  .article-meta {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}

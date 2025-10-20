@@ -1,0 +1,225 @@
+.rooms {
+  padding: 5rem 0;
+  background: white;
+}
+
+.rooms h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c5530;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.rooms-subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.room-item {
+  position: relative;
+  background: #f8fdf8;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8f5e8;
+}
+
+.room-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.room-image-placeholder {
+  height: 200px;
+  background: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #999;
+  border: 2px dashed #ddd;
+}
+
+.room-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(44, 85, 48, 0.9));
+  color: white;
+  padding: 2rem 1.5rem 1.5rem;
+  transform: translateY(70%);
+  transition: transform 0.3s ease;
+}
+
+.room-item:hover .room-overlay {
+  transform: translateY(0);
+}
+
+.room-overlay h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.room-overlay p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.room-features {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.feature-tag {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #666;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.modal-room-image {
+  height: 200px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #999;
+  margin-bottom: 1.5rem;
+  border: 2px dashed #ddd;
+}
+
+.modal-content h3 {
+  color: #2c5530;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.modal-description {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.modal-features h4 {
+  color: #2c5530;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.modal-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-features li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  color: #666;
+}
+
+.modal-features li:before {
+  content: "✓ ";
+  color: #6b8e23;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.modal-features li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .rooms {
+    padding: 3rem 0;
+  }
+
+  .rooms h2 {
+    font-size: 2rem;
+  }
+
+  .rooms-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .room-overlay {
+    transform: translateY(50%);
+  }
+
+  .modal {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    padding: 1.5rem;
+  }
+}

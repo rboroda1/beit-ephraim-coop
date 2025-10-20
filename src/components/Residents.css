@@ -1,0 +1,164 @@
+.residents {
+  padding: 5rem 0;
+  background: white;
+}
+
+.residents h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c5530;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.residents-content {
+  display: grid;
+  gap: 3rem;
+}
+
+.info-section {
+  background: #f8fdf8;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid #e8f5e8;
+}
+
+.info-section h3 {
+  color: #2c5530;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.benefits-list,
+.responsibilities-list {
+  list-style: none;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.benefits-list li,
+.responsibilities-list li {
+  padding: 0.8rem 1rem;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #6b8e23;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.benefits-list li::before {
+  content: "✓ ";
+  color: #6b8e23;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.responsibilities-list li::before {
+  content: "• ";
+  color: #2c5530;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.process-steps {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.step {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.step-number {
+  background: #2c5530;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: #2c5530;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.step-content p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.housing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.housing-item {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.housing-item strong {
+  color: #2c5530;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.memorandum-container {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.pdf-viewer iframe {
+  border-radius: 8px;
+}
+
+.faq-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.faq-placeholder {
+  color: #666;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .residents {
+    padding: 3rem 0;
+  }
+
+  .residents h2 {
+    font-size: 2rem;
+  }
+
+  .info-section {
+    padding: 1.5rem;
+  }
+
+  .housing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step {
+    flex-direction: column;
+    text-align: center;
+  }
+}

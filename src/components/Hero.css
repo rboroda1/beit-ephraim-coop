@@ -1,0 +1,134 @@
+.hero {
+  position: relative;
+  margin-top: 60px;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top 20%;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.7);
+  /* backdrop-filter: blur(10px); */
+  border-radius: 20px;
+  padding: 4rem 3rem;
+  margin: 0 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  width: 100%;
+  max-width: 900px;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #2c5530;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #6b8e23;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  background: #2c5530;
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(44, 85, 48, 0.3);
+}
+
+.cta-button:hover {
+  background: #1e3a21;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(44, 85, 48, 0.4);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: calc(100vh - 60px);
+  }
+
+  .hero-overlay {
+    padding: 2.5rem 2rem;
+    margin: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+  }
+
+  .placeholder-background {
+    font-size: 3rem;
+  }
+
+  .cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-overlay {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+}
