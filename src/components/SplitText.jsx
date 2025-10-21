@@ -1,9 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { SplitText as GSAPSplitText } from 'gsap/SplitText'
-
-// Register the plugin
-gsap.registerPlugin(GSAPSplitText)
 
 const SplitText = ({
     text,
@@ -20,29 +16,37 @@ const SplitText = ({
     onLetterAnimationComplete = () => { }
 }) => {
     const textRef = useRef(null)
-    const splitTextRef = useRef(null)
 
     useEffect(() => {
         if (!textRef.current) return
 
-        // Create SplitText instance
-        splitTextRef.current = new GSAPSplitText(textRef.current, { type: splitType })
+        // Split text manually into characters
+        const chars = text.split('').map((char, index) => {
+            const span = document.createElement('span')
+            span.textContent = char === ' ' ? '\u00A0' : char // Use non-breaking space
+            span.style.display = 'inline-block'
+            span.style.opacity = '0'
+            span.style.transform = `translateY(${from.y || 50}px)`
+            return span
+        })
 
-        // Set initial state
-        gsap.set(splitTextRef.current[splitType], from)
+        // Clear and populate container
+        textRef.current.innerHTML = ''
+        chars.forEach(char => textRef.current.appendChild(char))
 
         // Create intersection observer for scroll-triggered animation
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // Animate each character/word/line
-                        gsap.to(splitTextRef.current[splitType], {
-                            ...to,
+                        // Animate each character
+                        gsap.to(chars, {
+                            opacity: to.opacity || 1,
+                            y: to.y || 0,
                             duration,
                             ease,
-                            delay: delay / 1000, // Convert ms to seconds
-                            stagger: 0.05, // Stagger animation between characters
+                            delay: delay / 1000,
+                            stagger: 0.05,
                             onComplete: () => {
                                 onLetterAnimationComplete()
                             }
@@ -65,9 +69,6 @@ const SplitText = ({
 
         // Cleanup
         return () => {
-            if (splitTextRef.current) {
-                splitTextRef.current.revert()
-            }
             observer.disconnect()
         }
     }, [text, delay, duration, ease, splitType, from, to, threshold, rootMargin, onLetterAnimationComplete])
