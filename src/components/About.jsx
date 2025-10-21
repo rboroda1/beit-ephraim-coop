@@ -17,7 +17,7 @@ function About() {
           </div>
 
           <div className="about-card">
-            <div className="card-icon">✡️</div>
+            <div className="card-icon">✡︎</div>
             <h3>Jewish Living</h3>
             <p>
               *Spiel about Jewish living*

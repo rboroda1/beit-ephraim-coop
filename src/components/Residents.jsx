@@ -36,28 +36,28 @@ function Residents() {
                 <div className="step-number">1</div>
                 <div className="step-content">
                   <h4>Submit Application</h4>
-                  <p>Complete our online application form with personal information and housing preferences.</p>
+                  <p>Complete our online application form.</p>
                 </div>
               </div>
               <div className="step">
                 <div className="step-number">2</div>
-                <div className="step-content">
-                  <h4>House Visit</h4>
-                  <p>Schedule a visit to meet current residents and experience our community firsthand.</p>
-                </div>
-              </div>
-              <div className="step">
-                <div className="step-number">3</div>
                 <div className="step-content">
                   <h4>Interview</h4>
                   <p>Participate in a casual interview with current residents.</p>
                 </div>
               </div>
               <div className="step">
+                <div className="step-number">3</div>
+                <div className="step-content">
+                  <h4>Come to Bayit Dinner</h4>
+                  <p>Meet some current Bayitniks, get to know our space, and see what Bayit dinner is usually like!</p>
+                </div>
+              </div>
+              <div className="step">
                 <div className="step-number">4</div>
                 <div className="step-content">
                   <h4>Decision</h4>
-                  <p>Receive notification about your application status within two weeks of deadline.</p>
+                  <p>Receive notification about your application status around two weeks after deadline. When we reach out, we'll either offer a spot in the house for the following semester, offer a spot on the waitlist, or not offer a spot. Waitlisted applicants are voted on in the future rounds of the semester.</p>
                 </div>
               </div>
             </div>
@@ -113,9 +113,9 @@ function Residents() {
             <h3>Application Form</h3>
             <div className="application-form-container">
               <p className="form-description">
-                Ready to apply? Fill out our application form below to start your journey with the Bayit community.
+                Ready to apply? Fill out our application form <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUmaAkJAw0D7R3LviHody_RbH5JchRVHGtA8UgExzSorRUqg/viewform?usp=dialog" target="_blank">here</a> to get started.
               </p>
-              <div className="google-form-embed">
+              {/* <div className="google-form-embed">
                 <iframe
                   src="https://docs.google.com/forms/d/e/1FAIpQLSe_PLACEHOLDER_FORM_ID/viewform?embedded=true"
                   width="100%"
@@ -130,7 +130,7 @@ function Residents() {
               </div>
               <p className="form-note">
                 Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_PLACEHOLDER_FORM_ID/viewform" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>
-              </p>
+              </p> */}
             </div>
           </div>
         </div>

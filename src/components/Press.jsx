@@ -31,12 +31,12 @@ function Press() {
         },
         {
             id: 4,
-            title: "Building Bridges: Food as Community",
-            publication: "NYC Student Life Magazine",
-            date: "September 2023",
-            description: "A feature on how shared cooking and dining experiences create lasting bonds among college students.",
-            url: "#", // Replace with actual URL
-            type: "magazine"
+            title: "An Urban Kibbutz Kitchen — On the Upper West Side",
+            publication: "The Forward",
+            date: "April 2016",
+            description: "An article centered around food at the Bayit!",
+            url: "https://forward.com/food/338350/an-urban-kibbutz-kitchen-on-the-upper-west-side/",
+            type: "feature"
         }
     ]
 
@@ -74,7 +74,7 @@ function Press() {
                     <h3>Media Inquiries</h3>
                     <p>
                         Interested in writing about the Bayit or cooperative living?
-                        <a href="mailto:beitephraim@columbia.edu"> Contact us</a> for interviews and information.
+                        <a href="mailto:bayitrecruiter@gmail.com"> Contact us</a> for interviews and information.
                     </p>
                 </div>
             </div>
