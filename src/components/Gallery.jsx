@@ -14,37 +14,37 @@ function Gallery() {
     {
       id: 1,
       title: "Bayitniks at Homecoming",
-      description: "Community members celebrating together at homecoming",
+      description: "Sharing our school spirit with our backyard neighbors",
       src: homecomingImage
     },
     {
       id: 2,
       title: "Cooking Communal Meal",
-      description: "Residents preparing a delicious meal together",
+      description: "Yakira cooking up something yummy",
       src: cookingImage
     },
     {
       id: 3,
       title: "Craft Night",
-      description: "Creative community time with arts and crafts",
+      description: "Arts and crafts time to de-stress",
       src: craftImage
     },
     {
       id: 4,
       title: "Friends in Walk-in Fridge",
-      description: "Having fun while organizing our food storage",
+      description: "Shoppers in the walk-in, ooh",
       src: fridgeImage
     },
     {
       id: 5,
       title: "Temporary Bayit Dog",
-      description: "Even our four-legged visitors are part of the family",
+      description: "The dog is temporary, and so is this picture",
       src: dogImage
     },
     {
       id: 6,
       title: "Urban Hike Excursion",
-      description: "Community adventures exploring the city together",
+      description: "Exploring the lovely nature of Manhattan together",
       src: hikeImage
     }
   ]

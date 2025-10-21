@@ -32,7 +32,7 @@ function Hero() {
             Come live at the Beit Ephraim Food Co-Op!
           </p>
           <p className="hero-description">
-            We are Columbia's only pluralistic Jewish food co-op for both undergraduate and graduate students.
+            Columbia's pluralistic Jewish food co-op for undergraduate and graduate students
           </p>
           <button
             className="cta-button"

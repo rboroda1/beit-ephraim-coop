@@ -41,8 +41,14 @@
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
 }
 
-.room-image-placeholder {
+.room-image-container {
+  position: relative;
   height: 200px;
+}
+
+.room-image-placeholder {
+  width: 100%;
+  height: 100%;
   background: #f0f0f0;
   display: flex;
   align-items: center;
@@ -52,6 +58,62 @@
   border: 2px dashed #ddd;
 }
 
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: white;
+  transform: scale(1.2);
+}
+
 .room-overlay {
   position: absolute;
   bottom: 0;
@@ -59,13 +121,13 @@
   right: 0;
   background: linear-gradient(transparent, rgba(44, 85, 48, 0.9));
   color: white;
-  padding: 2rem 1.5rem 1.5rem;
-  transform: translateY(70%);
+  padding: 2rem 1.5rem 2rem;
+  transform: translateY(55%);
   transition: transform 0.3s ease;
 }
 
 .room-item:hover .room-overlay {
-  transform: translateY(0);
+  transform: translateY(40px);
 }
 
 .room-overlay h4 {
@@ -212,7 +274,27 @@
   }
 
   .room-overlay {
-    transform: translateY(50%);
+    transform: translateY(60%);
+    padding: 1.5rem 1rem 1.5rem;
+  }
+
+  .carousel-btn {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+
+  .carousel-prev {
+    left: 5px;
+  }
+
+  .carousel-next {
+    right: 5px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
   }
 
   .modal {
