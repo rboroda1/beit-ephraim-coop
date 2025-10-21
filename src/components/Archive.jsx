@@ -109,9 +109,6 @@ function Archive() {
     <section id="archive" className="archive">
       <div className="container">
         <h2>Bayit Archives</h2>
-        <p className="archive-subtitle">
-          Scroll through our community's history in 3D
-        </p>
 
         <div className="archive-3d-container">
           <div

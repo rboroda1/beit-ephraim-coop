@@ -15,7 +15,7 @@ function Hero() {
       <div className="hero-overlay">
         <div className="hero-content">
           <SplitText
-            text="Welcome to the Columbia/Barnard Bayit"
+            text="Welcome to the Bayit"
             className="hero-title"
             delay={100}
             duration={0.6}
@@ -32,8 +32,7 @@ function Hero() {
             Come live at the Beit Ephraim Food Co-Op!
           </p>
           <p className="hero-description">
-            Experience sustainable living, community cooking, and lifelong friendships
-            in our cooperative housing environment.
+            We are Columbia's only pluralistic Jewish food co-op for both undergraduate and graduate students.
           </p>
           <button
             className="cta-button"

@@ -8,21 +8,14 @@
   text-align: center;
   font-size: 2.5rem;
   color: #2c5530;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 700;
-}
-
-.archive-subtitle {
-  text-align: center;
-  color: #666;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
 }
 
 .archive-3d-container {
   position: relative;
   height: 300px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   perspective: 1000px;
   perspective-origin: center center;
 }

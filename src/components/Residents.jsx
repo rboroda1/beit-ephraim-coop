@@ -1,4 +1,5 @@
 import './Residents.css'
+import memorandumPdf from '/Bayit Memorandum.pdf'
 
 function Residents() {
   return (
@@ -85,14 +86,14 @@ function Residents() {
             <div className="memorandum-container">
               <div className="pdf-viewer">
                 <iframe
-                  src="public/Bayit Memorandum.pdf"
+                  src={memorandumPdf}
                   width="100%"
                   height="400"
                   frameBorder="0"
                   title="Bayit Memorandum"
                 >
                   <p>Your browser does not support PDFs.
-                    <a href="public/Bayit Memorandum.pdf">Download the PDF</a>
+                    <a href={memorandumPdf}>Download the PDF</a>
                   </p>
                 </iframe>
               </div>
@@ -104,6 +105,31 @@ function Residents() {
             <div className="faq-container">
               <p className="faq-placeholder">
                 FAQ content will be added here soon. Check back for answers to common questions about living at the Bayit!
+              </p>
+            </div>
+          </div>
+
+          <div className="info-section">
+            <h3>Application Form</h3>
+            <div className="application-form-container">
+              <p className="form-description">
+                Ready to apply? Fill out our application form below to start your journey with the Bayit community.
+              </p>
+              <div className="google-form-embed">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSe_PLACEHOLDER_FORM_ID/viewform?embedded=true"
+                  width="100%"
+                  height="600"
+                  frameBorder="0"
+                  marginHeight="0"
+                  marginWidth="0"
+                  title="Bayit Application Form"
+                >
+                  Loading form...
+                </iframe>
+              </div>
+              <p className="form-note">
+                Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_PLACEHOLDER_FORM_ID/viewform" target="_blank" rel="noopener noreferrer">Open it in a new tab</a>
               </p>
             </div>
           </div>

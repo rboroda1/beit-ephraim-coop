@@ -32,15 +32,6 @@ function About() {
               Everyone contributes to our shared living experience.
             </p>
           </div>
-
-          <div className="about-card">
-            <div className="card-icon">🎓</div>
-            <h3>More</h3>
-            <p>
-              A supportive environment for Columbia and Barnard students to thrive
-              academically while building lasting friendships.
-            </p>
-          </div>
         </div>
       </div>
     </section>
