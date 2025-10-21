@@ -24,7 +24,9 @@ function App() {
       <Press />
       <Residents />
       <Spotify />
-      <Archive />
+      <div style={{ width: '100vw', height: '100vh' }}>
+        <Archive />
+      </div>
       <Contact />
       <Footer />
     </div>

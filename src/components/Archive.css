@@ -1,6 +1,7 @@
 .archive {
   padding: 5rem 0;
   background: white;
+  overflow: hidden;
 }
 
 .archive h2 {
@@ -18,67 +19,128 @@
   margin-bottom: 3rem;
 }
 
-.archive-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.archive-item {
+.archive-3d-container {
   position: relative;
-  background: #f8fdf8;
-  border-radius: 12px;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border: 1px solid #e8f5e8;
+  height: 300px;
+  margin-bottom: 3rem;
+  perspective: 1000px;
+  perspective-origin: center center;
 }
 
-.archive-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+/* Removed scroll hint styles */
+
+.archive-3d-scroll {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem 0;
+  scroll-behavior: smooth;
+}
+
+.archive-3d-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.archive-3d-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.archive-3d-scroll::-webkit-scrollbar-thumb {
+  background: #6b8e23;
+  border-radius: 4px;
+}
+
+.archive-3d-scroll::-webkit-scrollbar-thumb:hover {
+  background: #2c5530;
+}
+
+.archive-3d-grid {
+  display: flex;
+  gap: 2rem;
+  padding: 0 50vw 0 2rem;
+  height: 100%;
+  align-items: center;
+}
+
+.archive-3d-item {
+  flex-shrink: 0;
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: slideIn 0.6s ease-out forwards;
+  animation-delay: var(--delay, 0s);
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.archive-3d-card {
+  width: 100%;
+  height: 100%;
+  background: #f8fdf8;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8f5e8;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.archive-3d-item:hover .archive-3d-card {
+  box-shadow: 0 16px 48px rgba(44, 85, 48, 0.2);
+  transform: translateY(-10px);
 }
 
 .archive-image-placeholder {
-  height: 200px;
-  background: #f0f0f0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 2rem;
   color: #999;
   border: 2px dashed #ddd;
+  position: relative;
+  overflow: hidden;
 }
 
-.archive-overlay {
+.archive-image-placeholder::before {
+  content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(44, 85, 48, 0.9));
-  color: white;
-  padding: 2rem 1.5rem 1.5rem;
-  transform: translateY(100%);
-  transition: transform 0.3s ease;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
 }
 
-.archive-item:hover .archive-overlay {
-  transform: translateY(0);
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
 }
 
-.archive-overlay h4 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.archive-overlay p {
-  font-size: 0.9rem;
-  opacity: 0.9;
-  line-height: 1.4;
-}
+/* Removed archive-3d-info styles since we're not using descriptions in the scroll */
 
 /* Modal styles */
 .modal {
@@ -93,15 +155,28 @@
   justify-content: center;
   z-index: 2000;
   padding: 2rem;
+  backdrop-filter: blur(5px);
 }
 
 .modal-content {
   background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  max-width: 500px;
-  width: 100%;
+  border-radius: 16px;
+  padding: 0;
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
   position: relative;
+  transform: scale(0.9);
+  animation: modalIn 0.3s ease-out forwards;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes modalIn {
+  to {
+    transform: scale(1);
+  }
 }
 
 .close-button {
@@ -127,29 +202,57 @@
   color: #333;
 }
 
+.modal-image-container {
+  position: relative;
+  width: 600px;
+  max-width: 90vw;
+}
+
 .modal-image {
-  height: 200px;
-  background: #f0f0f0;
-  border-radius: 8px;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #f0f0f0 0%, #e8e8e8 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #999;
-  margin-bottom: 1.5rem;
   border: 2px dashed #ddd;
+  position: relative;
+  overflow: hidden;
 }
 
-.modal-content h3 {
+.modal-image::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transform: rotate(45deg);
+  animation: shimmer 3s infinite;
+}
+
+.modal-info {
+  padding: 2rem;
+  background: white;
+}
+
+.modal-info h3 {
   color: #2c5530;
   margin-bottom: 1rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
 
-.modal-content p {
+.modal-info p {
   color: #666;
   line-height: 1.6;
+  margin: 0;
 }
 
 .archive-note {
@@ -185,9 +288,30 @@
     font-size: 2rem;
   }
 
-  .archive-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .archive-3d-container {
+    height: 250px;
+  }
+
+  .archive-3d-item {
+    width: 200px;
+    height: 200px;
+  }
+
+  .modal-image-container {
+    width: 90vw;
+  }
+
+  .modal-image {
+    height: 300px;
+  }
+
+  .modal-info {
+    padding: 1.5rem;
+  }
+
+  .archive-3d-grid {
+    padding: 0 25vw 0 1rem;
+    gap: 1.5rem;
   }
 
   .modal {

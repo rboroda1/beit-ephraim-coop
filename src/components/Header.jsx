@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './Header.css'
-import logo from '../assets/images/logos/dog-logo.png'
+import logo from '../assets/images/logos/Cooking Pot Logo.png'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -15,7 +15,7 @@ function Header() {
       <div className="header-container">
         <div className="logo">
           <img src={logo} alt="Bayit Logo" className="logo-image" />
-          <h2>The Columbia/Barnard Bayit</h2>
+          <h2>The Columbia Bayit</h2>
         </div>
 
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
