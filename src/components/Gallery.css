@@ -93,7 +93,7 @@
 .modal-content {
   background: white;
   border-radius: 12px;
-  padding: 2rem;
+  /* padding: 2rem; */
   max-width: 500px;
   width: 100%;
   position: relative;
@@ -125,18 +125,22 @@
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
-  margin-bottom: 1rem;
+  padding: 10px;
 }
 
 .modal-content h3 {
   color: #2c5530;
-  margin-bottom: 1rem;
   font-size: 1.3rem;
+  padding: 10px 10px 0;
+  margin-bottom: 0;
+  text-align: center;
 }
 
 .modal-content p {
-  color: #666;
+  color: #2c5530;
   line-height: 1.6;
+  padding: 0 10px 10px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

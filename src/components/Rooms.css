@@ -359,8 +359,12 @@
   }
 
   .room-overlay {
-    transform: translateY(70%);
+    transform: translateY(75%);
     padding: 1rem;
+  }
+
+  .room-item:hover .room-overlay {
+    transform: translateY(0);
   }
 
   .modal-image-container {

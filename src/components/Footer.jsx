@@ -7,9 +7,9 @@ function Footer() {
         <div className="footer-content">
           <div className="footer-section">
             <h4>Beit Ephraim Food Co-Op</h4>
-            <p>Building community through cooperative living since [Year]</p>
+            <p>Building community through cooperative living since 1972</p>
           </div>
-          
+
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
@@ -23,15 +23,14 @@ function Footer() {
           <div className="footer-section">
             <h4>Connect</h4>
             <div className="social-links">
-              <a href="#" aria-label="Instagram">📷</a>
-              <a href="#" aria-label="Facebook">📘</a>
-              <a href="mailto:beitephraim@columbia.edu" aria-label="Email">📧</a>
+              <a href="https://www.instagram.com/the_bayit/" aria-label="Instagram">📷</a>
+              <a href="mailto:bayitrecruiter@gmail.com" aria-label="Email">📧</a>
             </div>
           </div>
         </div>
-        
+
         <div className="footer-bottom">
-          <p>&copy; 2024 Beit Ephraim Food Co-Op. All rights reserved.</p>
+          <p>&copy; 2025 Beit Ephraim Food Co-Op.</p>
         </div>
       </div>
     </footer>

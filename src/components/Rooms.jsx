@@ -16,7 +16,7 @@ function Rooms() {
             title: "401",
             description: "Shai's -01 room layout",
             features: ["Private bedroom", "Shared bathroom", "Desk and storage", "Natural light"],
-            images: [room401_1, room401_2, room401_3, room401_4, room401_5],
+            images: [room401_1, room401_2, room401_3, room401_5],
             hasRealImages: true
         },
         {

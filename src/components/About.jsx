@@ -17,7 +17,7 @@ function About() {
 
           <div className="about-card">
             <div className="card-icon">✡︎</div>
-            <h3>Jewish Living</h3>
+            <h3>Jewish Pluralism</h3>
             <p>
               *Spiel about Jewish living*
             </p>
@@ -25,9 +25,9 @@ function About() {
 
           <div className="about-card">
             <div className="card-icon">🤝</div>
-            <h3>Community Values</h3>
+            <h3>Community History</h3>
             <p>
-              *Spiel about how we've been around for a long time, value community living*
+              Founded in the Fall of 1972 by twenty-eight initial members, the Bayit is the nation's oldest student-run Jewish housing co-op. It remains a diverse and inclusive space at Columbia and Barnard for Jewish students who want to live communally.
             </p>
           </div>
         </div>
