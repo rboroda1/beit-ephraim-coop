@@ -14,7 +14,7 @@ function Rooms() {
         {
             id: 1,
             title: "401",
-            description: "Cozy private space perfect for studying and relaxing",
+            description: "Shai's -01 room layout",
             features: ["Private bedroom", "Shared bathroom", "Desk and storage", "Natural light"],
             images: [room401_1, room401_2, room401_3, room401_4, room401_5],
             hasRealImages: true
@@ -22,7 +22,7 @@ function Rooms() {
         {
             id: 2,
             title: "402",
-            description: "Shared room with a roommate, great for building friendships",
+            description: "Rachel's -02 room layout",
             features: ["Two beds", "Shared space", "Double the storage", "Built-in community"],
             images: ["coming-soon"],
             hasRealImages: false
@@ -30,7 +30,7 @@ function Rooms() {
         {
             id: 3,
             title: "303",
-            description: "Heart of the Bayit where all the cooking magic happens",
+            description: "____'s -03 room layout",
             features: ["Full appliances", "Ample counter space", "Community dining", "Pantry storage"],
             images: ["coming-soon"],
             hasRealImages: false
@@ -38,7 +38,7 @@ function Rooms() {
         {
             id: 4,
             title: "504",
-            description: "Quiet space for focused work and group study sessions",
+            description: "____'s -04 room layout",
             features: ["Comfortable seating", "Good lighting", "Whiteboards", "Quiet atmosphere"],
             images: ["coming-soon"],
             hasRealImages: false
@@ -46,7 +46,7 @@ function Rooms() {
         {
             id: 5,
             title: "605",
-            description: "Social hub for movie nights, games, and hanging out",
+            description: "____'s -05 room layout",
             features: ["Comfy couches", "Entertainment setup", "Game storage", "Social atmosphere"],
             images: ["coming-soon"],
             hasRealImages: false
@@ -54,7 +54,7 @@ function Rooms() {
         {
             id: 6,
             title: "506",
-            description: "Clean, well-maintained shared bathroom facilities",
+            description: "Maeve's -06 room layout",
             features: ["Multiple stalls", "Good lighting", "Storage space", "Regular cleaning"],
             images: ["coming-soon"],
             hasRealImages: false
