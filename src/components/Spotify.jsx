@@ -25,8 +25,7 @@ function Spotify() {
 
                     <div className="playlist-info">
                         <p>
-                            This playlist is curated by current Bayitniks and updated regularly.
-                            From study vibes to cooking beats, it's the soundtrack to our community life!
+                            This playlist is curated by current Bayitniks to reflect some tunes we're listening to!
                         </p>
                     </div>
                 </div>

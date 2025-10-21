@@ -11,8 +11,7 @@ function About() {
             <div className="card-icon">🍽️</div>
             <h3>Cooperative Cooking</h3>
             <p>
-              Share meals, recipes, and cooking responsibilities with fellow residents.
-              Our community kitchen is the heart of Beit Ephraim.
+              *Spiel about cooking/food at Bayit*
             </p>
           </div>
 
@@ -28,8 +27,7 @@ function About() {
             <div className="card-icon">🤝</div>
             <h3>Community Values</h3>
             <p>
-              Built on principles of cooperation, inclusivity, and mutual support.
-              Everyone contributes to our shared living experience.
+              *Spiel about how we've been around for a long time, value community living*
             </p>
           </div>
         </div>

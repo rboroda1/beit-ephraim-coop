@@ -154,7 +154,7 @@ function Archive() {
         <div className="archive-note">
           <p>
             Have historical photos to share?
-            <a href="mailto:beitephraim@columbia.edu"> Send them our way!</a>
+            <a href="mailto:bayitrecruiter@gmail.com"> Send them our way!</a>
           </p>
         </div>
       </div>
