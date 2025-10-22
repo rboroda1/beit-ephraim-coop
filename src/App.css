@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -46,4 +47,14 @@ button {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+/* Banner closed adjustments */
+body.banner-closed .header {
+  top: 0 !important;
+}
+
+body.banner-closed .hero {
+  margin-top: 60px !important;
+  height: calc(100vh - 60px) !important;
 }

@@ -15,7 +15,7 @@ function Header() {
       <div className="header-container">
         <div className="logo">
           <img src={logo} alt="Bayit Logo" className="logo-image" />
-          <h2>The Columbia Bayit</h2>
+          <h2>The Bayit @ Columbia</h2>
         </div>
 
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

@@ -11,11 +11,30 @@
   font-weight: 700;
 }
 
+.testimonials-title {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.testimonials-title.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .testimonials-subtitle {
   text-align: center;
   color: #666;
   font-size: 1.1rem;
   margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.testimonials-subtitle.animate-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .testimonials-grid {
@@ -32,6 +51,14 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   border: 1px solid #e8f5e8;
+  opacity: 0;
+  transform: translateY(40px) rotateX(10deg);
+}
+
+.testimonial-card.animate-in {
+  opacity: 1;
+  transform: translateY(0) rotateX(0deg);
+  transition: all 0.7s ease;
 }
 
 .testimonial-card:hover {

@@ -1,6 +1,7 @@
 .header {
   position: fixed;
-  top: 0;
+  top: 50px;
+  /* Account for banner height */
   left: 0;
   right: 0;
   background: rgba(255, 255, 255, 0.95);
@@ -8,6 +9,7 @@
   border-bottom: 1px solid #e0e0e0;
   z-index: 1000;
   padding: 0.75rem 0;
+  transition: top 0.3s ease;
 }
 
 .header-container {

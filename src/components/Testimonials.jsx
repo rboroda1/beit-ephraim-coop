@@ -1,6 +1,11 @@
 import './Testimonials.css'
+import { useScrollAnimation, useStaggeredAnimation } from '../hooks/useScrollAnimation'
 
 function Testimonials() {
+    const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 })
+    const [subtitleRef, subtitleVisible] = useScrollAnimation({ threshold: 0.3, delay: 200 })
+    const [testimonialsRef, visibleTestimonials] = useStaggeredAnimation(5, { staggerDelay: 100 })
+
     const testimonials = [
         {
             id: 1,
@@ -42,14 +47,25 @@ function Testimonials() {
     return (
         <section id="testimonials" className="testimonials">
             <div className="container">
-                <h2>What Bayit Residents/Alum Say</h2>
-                <p className="testimonials-subtitle">
+                <h2
+                    ref={titleRef}
+                    className={`testimonials-title ${titleVisible ? 'animate-in' : ''}`}
+                >
+                    What Bayit Residents/Alum Say
+                </h2>
+                <p
+                    ref={subtitleRef}
+                    className={`testimonials-subtitle ${subtitleVisible ? 'animate-in' : ''}`}
+                >
                     Hear about current and former Bayitnik experiences.
                 </p>
 
-                <div className="testimonials-grid">
-                    {testimonials.map((testimonial) => (
-                        <div key={testimonial.id} className="testimonial-card">
+                <div ref={testimonialsRef} className="testimonials-grid">
+                    {testimonials.map((testimonial, index) => (
+                        <div
+                            key={testimonial.id}
+                            className={`testimonial-card ${visibleTestimonials.has(index) ? 'animate-in' : ''}`}
+                        >
                             <div className="testimonial-content">
                                 <div className="quote-icon">"</div>
                                 <p className="testimonial-quote">{testimonial.quote}</p>

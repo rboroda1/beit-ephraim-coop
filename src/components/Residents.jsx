@@ -1,14 +1,22 @@
 import './Residents.css'
 import memorandumPdf from '/Bayit Memorandum.pdf'
+import { useScrollAnimation, useStaggeredAnimation } from '../hooks/useScrollAnimation'
 
 function Residents() {
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 })
+  const [sectionsRef, visibleSections] = useStaggeredAnimation(7, { staggerDelay: 200 })
   return (
     <section id="residents" className="residents">
       <div className="container">
-        <h2>Information for Prospective Residents</h2>
+        <h2
+          ref={titleRef}
+          className={`residents-title ${titleVisible ? 'animate-in' : ''}`}
+        >
+          Information for Prospective Residents
+        </h2>
 
-        <div className="residents-content">
-          <div className="info-section">
+        <div ref={sectionsRef} className="residents-content">
+          <div className={`info-section ${visibleSections.has(0) ? 'animate-in' : ''}`}>
             <h3>What We Offer</h3>
             <ul className="benefits-list">
               <li>Shared meals and cooking responsibilities</li>
@@ -18,18 +26,18 @@ function Residents() {
             </ul>
           </div>
 
-          <div className="info-section">
+          <div className={`info-section ${visibleSections.has(1) ? 'animate-in' : ''}`}>
             <h3>Expectations & Responsibilities</h3>
             <ul className="responsibilities-list">
               <li>Pay a "Kuppah" sum (generally around $1000 per semester) that covers all groceries, subscriptions, laundry supplies, and other essentials</li>
               <li>Complete weekly "Toranut" chores to keep the house clean and a great space to be in</li>
               <li>Participate in regular house meetings</li>
-              <li>Plan a meal (with a partner) 3-4 times each semester</li>
+              <li>Plan and cook a meal (with a partner) 3-4 times each semester</li>
               <li>Respect community guidelines and house rules</li>
             </ul>
           </div>
 
-          <div className="info-section">
+          <div className={`info-section ${visibleSections.has(2) ? 'animate-in' : ''}`}>
             <h3>Application Process</h3>
             <div className="process-steps">
               <div className="step">
@@ -63,7 +71,7 @@ function Residents() {
             </div>
           </div>
 
-          <div className="info-section">
+          <div className={`info-section ${visibleSections.has(3) ? 'animate-in' : ''}`}>
             <h3>Housing Details</h3>
             <div className="housing-grid">
               <div className="housing-item">
@@ -81,7 +89,7 @@ function Residents() {
             </div>
           </div>
 
-          <div className="info-section">
+          <div className={`info-section ${visibleSections.has(4) ? 'animate-in' : ''}`}>
             <h3>Memorandum</h3>
             <div className="memorandum-container">
               <div className="pdf-viewer">
@@ -100,7 +108,7 @@ function Residents() {
             </div>
           </div>
 
-          <div className="info-section">
+          <div className={`info-section ${visibleSections.has(5) ? 'animate-in' : ''}`}>
             <h3>Frequently Asked Questions</h3>
             <div className="faq-container">
               <p className="faq-placeholder">
@@ -109,7 +117,7 @@ function Residents() {
             </div>
           </div>
 
-          <div className="info-section">
+          <div className={`info-section ${visibleSections.has(6) ? 'animate-in' : ''}`}>
             <h3>Application Form</h3>
             <div className="application-form-container">
               <p className="form-description">

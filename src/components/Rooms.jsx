@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './Rooms.css'
+import { useScrollAnimation, useStaggeredAnimation } from '../hooks/useScrollAnimation'
 import room401_1 from '../assets/images/rooms/401 Pics/WhatsApp Image 2025-10-20 at 18.41.42.jpeg'
 import room401_2 from '../assets/images/rooms/401 Pics/WhatsApp Image 2025-10-20 at 18.41.42 (1).jpeg'
 import room401_3 from '../assets/images/rooms/401 Pics/WhatsApp Image 2025-10-20 at 18.41.43.jpeg'
@@ -9,6 +10,9 @@ import room401_5 from '../assets/images/rooms/401 Pics/WhatsApp Image 2025-10-20
 function Rooms() {
     const [selectedRoom, setSelectedRoom] = useState(null)
     const [currentImageIndex, setCurrentImageIndex] = useState({})
+    const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 })
+    const [subtitleRef, subtitleVisible] = useScrollAnimation({ threshold: 0.3, delay: 200 })
+    const [roomsRef, visibleRooms] = useStaggeredAnimation(6, { staggerDelay: 150 })
 
     const rooms = [
         {
@@ -85,16 +89,24 @@ function Rooms() {
     return (
         <section id="rooms" className="rooms">
             <div className="container">
-                <h2>Our Living Spaces</h2>
-                <p className="rooms-subtitle">
+                <h2
+                    ref={titleRef}
+                    className={`rooms-title ${titleVisible ? 'animate-in' : ''}`}
+                >
+                    Our Living Spaces
+                </h2>
+                <p
+                    ref={subtitleRef}
+                    className={`rooms-subtitle ${subtitleVisible ? 'animate-in' : ''}`}
+                >
                     Explore the different types of rooms and spaces available at the Bayit
                 </p>
 
-                <div className="rooms-grid">
-                    {rooms.map((room) => (
+                <div ref={roomsRef} className="rooms-grid">
+                    {rooms.map((room, index) => (
                         <div
                             key={room.id}
-                            className="room-item"
+                            className={`room-item ${visibleRooms.has(index) ? 'animate-in' : ''}`}
                             onClick={() => setSelectedRoom(room)}
                         >
                             <div className="room-image-container">

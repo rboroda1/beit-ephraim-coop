@@ -1,7 +1,8 @@
 .hero {
   position: relative;
-  margin-top: 60px;
-  height: calc(100vh - 60px);
+  margin-top: 110px;
+  /* 50px banner + 60px header */
+  height: calc(100vh - 110px);
   width: 100vw;
   display: flex;
   align-items: center;
