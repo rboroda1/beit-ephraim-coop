@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: margin-top 0.3s ease, height 0.3s ease;
 }
 
 .hero-background {
@@ -91,7 +92,11 @@
 
 @media (max-width: 768px) {
   .hero {
-    height: calc(100vh - 60px);
+    height: calc(100vh - 110px);
+  }
+
+  body.banner-closed .hero {
+    height: calc(100vh - 60px) !important;
   }
 
   .hero-overlay {

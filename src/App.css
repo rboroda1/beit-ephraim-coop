@@ -52,9 +52,11 @@ a {
 /* Banner closed adjustments */
 body.banner-closed .header {
   top: 0 !important;
+  transition: top 0.3s ease;
 }
 
 body.banner-closed .hero {
   margin-top: 60px !important;
   height: calc(100vh - 60px) !important;
+  transition: margin-top 0.3s ease, height 0.3s ease;
 }
