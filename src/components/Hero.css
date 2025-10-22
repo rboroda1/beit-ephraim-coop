@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  margin-top: 110px;
+  margin-top: 140px;
   /* 50px banner + 60px header */
   height: calc(100vh - 110px);
   width: 100vw;
