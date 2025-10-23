@@ -6,6 +6,8 @@ import room401_2 from '../assets/images/rooms/401 Pics/WhatsApp Image 2025-10-20
 import room401_3 from '../assets/images/rooms/401 Pics/WhatsApp Image 2025-10-20 at 18.41.43.jpeg'
 import room401_4 from '../assets/images/rooms/401 Pics/WhatsApp Image 2025-10-20 at 18.41.43 (1).jpeg'
 import room401_5 from '../assets/images/rooms/401 Pics/WhatsApp Image 2025-10-20 at 18.41.43 (2).jpeg'
+import room405_1 from '../assets/images/rooms/405 Pics/WhatsApp Image 2025-10-21 at 18.52.51.jpeg'
+import room405_2 from '../assets/images/rooms/405 Pics/WhatsApp Image 2025-10-21 at 18.52.52.jpeg'
 
 function Rooms() {
     const [selectedRoom, setSelectedRoom] = useState(null)
@@ -49,11 +51,11 @@ function Rooms() {
         },
         {
             id: 5,
-            title: "605",
-            description: "____'s -05 room layout",
-            features: ["Comfy couches", "Entertainment setup", "Game storage", "Social atmosphere"],
-            images: ["coming-soon"],
-            hasRealImages: false
+            title: "405",
+            description: "Yakira's -05 room layout",
+            features: ["Private bedroom", "Shared bathroom", "Desk and storage"],
+            images: [room405_1, room405_2],
+            hasRealImages: true
         },
         {
             id: 6,

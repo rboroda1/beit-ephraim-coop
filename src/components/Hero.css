@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   margin-top: 140px;
-  /* 50px banner + 60px header */
+  /* 50px banner + 60px header + 30px to get Nathan's head in*/
   height: calc(100vh - 110px);
   width: 100vw;
   display: flex;
