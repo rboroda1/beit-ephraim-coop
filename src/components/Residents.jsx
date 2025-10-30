@@ -111,8 +111,15 @@ function Residents() {
           <div className={`info-section ${visibleSections.has(5) ? 'animate-in' : ''}`}>
             <h3>Frequently Asked Questions</h3>
             <div className="faq-container">
-              <p className="faq-placeholder">
-                FAQ content will be added here soon. Check back for answers to common questions about living at the Bayit!
+              <p className="faq-text">
+                Q: Can I study abroad if I live at the Bayit?<br />
+                A: Yes! If you choose to study abroad, your spot at the Bayit will be saved for the following semester.<br /><br />
+                Q: Can I eat non-kosher food at the Bayit?<br />
+                A: Yes! Non-kosher food is allowed in every part of the house besides our kosher kitchen. We have personal fridges in the dining room for personal food items, and our lounge has a non-kosher microwave and toaster oven.<br /><br />
+                Q: Can I stay in the Bayit over the summer?<br />
+                A: Yes! If you are a current Bayit resident, you may extend your lease through the summer. If you're not currently a resident, you can apply during the spring semester to sublet for the summer.<br /><br />
+                Q: Is it okay if I don't know anything about kashrut or Shabbat observance?<br />
+                A: Absolutely. All residents undergo a kashrut orientation upon moving in, and fellow Bayitniks are always happy to share their knowledge!
               </p>
             </div>
           </div>

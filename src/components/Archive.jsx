@@ -1,71 +1,35 @@
 import { useState, useRef, useEffect } from 'react'
 import './Archive.css'
+import { useScrollAnimation } from '../hooks/useScrollAnimation'
+import archivePhoto1 from '../assets/images/archive/bayit-archive-1.jpeg'
+import archivePhoto2 from '../assets/images/archive/bayit-archive-2.jpeg'
 
 function Archive() {
   const [selectedPhoto, setSelectedPhoto] = useState(null)
   const scrollContainerRef = useRef(null)
+  const [titleRef, titleVisible] = useScrollAnimation({ threshold: 0.3 })
+  const [containerRef, containerVisible] = useScrollAnimation({ threshold: 0.2, delay: 200 })
 
   const archivePhotos = [
     {
       id: 1,
-      title: "Early Bayit Days - 1990s",
-      description: "Historic photos from the founding years of the community"
+      image: archivePhoto1,
+      title: "HOLD THE SAUSAGE",
+      description: "Feature in the 19 March 1974 copy of the Columbia Spectator."
     },
     {
       id: 2,
-      title: "First Community Dinners",
-      description: "Memories from the very first shared meals together"
-    },
-    {
-      id: 3,
-      title: "Vintage House Events",
-      description: "Celebrations and gatherings from decades past"
-    },
-    {
-      id: 4,
-      title: "Kitchen Through the Years",
-      description: "Evolution of our community kitchen space"
-    },
-    {
-      id: 5,
-      title: "Alumni Reunions",
-      description: "Former residents returning to visit the community"
-    },
-    {
-      id: 6,
-      title: "House Traditions",
-      description: "Long-standing Bayit customs and celebrations"
-    },
-    {
-      id: 7,
-      title: "Community Projects",
-      description: "Collaborative efforts and house improvements over time"
-    },
-    {
-      id: 8,
-      title: "Milestone Moments",
-      description: "Special occasions and memorable community experiences"
-    },
-    {
-      id: 9,
-      title: "Holiday Celebrations",
-      description: "Festive moments throughout the years"
-    },
-    {
-      id: 10,
-      title: "Study Sessions",
-      description: "Academic life and collaborative learning"
-    },
-    {
-      id: 11,
-      title: "Garden Projects",
-      description: "Growing food and community together"
-    },
-    {
-      id: 12,
-      title: "House Renovations",
-      description: "Improving our shared spaces over time"
+      image: archivePhoto2,
+      title: "Advertisement for First Bayit Cohort",
+      description: "Information meeting advertisement in the 19 April 1972 copy of the Spectator."
     }
+    // Add more photos here following the same pattern:
+    // {
+    //   id: 3,
+    //   image: archivePhoto3,
+    //   title: "Your Photo Title",
+    //   description: "Your photo description"
+    // }
   ]
 
   useEffect(() => {
@@ -108,9 +72,17 @@ function Archive() {
   return (
     <section id="archive" className="archive">
       <div className="container">
-        <h2>Bayit Archives</h2>
+        <h2
+          ref={titleRef}
+          className={`archive-title ${titleVisible ? 'animate-in' : ''}`}
+        >
+          Bayit Archives
+        </h2>
 
-        <div className="archive-3d-container">
+        <div
+          ref={containerRef}
+          className={`archive-3d-container ${containerVisible ? 'animate-in' : ''}`}
+        >
           <div
             ref={scrollContainerRef}
             className="archive-3d-scroll"
@@ -126,8 +98,13 @@ function Archive() {
                   }}
                 >
                   <div className="archive-3d-card">
-                    <div className="archive-image-placeholder">
-                      📸
+                    <img
+                      src={photo.image}
+                      alt={photo.title}
+                      className="archive-image"
+                    />
+                    <div className="archive-overlay">
+                      <h4>{photo.title}</h4>
                     </div>
                   </div>
                 </div>
@@ -141,7 +118,11 @@ function Archive() {
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
               <button className="close-button" onClick={() => setSelectedPhoto(null)}>×</button>
               <div className="modal-image-container">
-                <div className="modal-image">📸 {selectedPhoto.title}</div>
+                <img
+                  src={selectedPhoto.image}
+                  alt={selectedPhoto.title}
+                  className="modal-image"
+                />
               </div>
               <div className="modal-info">
                 <h3>{selectedPhoto.title}</h3>

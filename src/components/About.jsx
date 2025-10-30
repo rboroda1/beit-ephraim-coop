@@ -23,7 +23,7 @@ function About() {
             <div className="card-icon">🍽️</div>
             <h3>Cooperative Cooking</h3>
             <p>
-              *Spiel about cooking/food at Bayit*
+              Food in the Bayit is purchased collectively and abides by the Orthodox Kashrut standards shared by our kitchen. Each weeknight, a pair of Bayitniks cooks dinner for the whole Bayit to eat as a community. On Friday nights, we have a big potluck for Shabbat!
             </p>
           </div>
 
@@ -31,7 +31,7 @@ function About() {
             <div className="card-icon">✡︎</div>
             <h3>Jewish Pluralism</h3>
             <p>
-              *Spiel about Jewish living*
+              The Bayit is founded on principles of pluralism and diversity, welcoming Jewish students from all backgrounds and levels of observance to celebrate their identity and practices in our community. We maintain a kosher kitchen and Shabbat zones while also encouraging personal freedom in shared spaces.
             </p>
           </div>
 
