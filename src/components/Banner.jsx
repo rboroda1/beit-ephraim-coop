@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react'
 import './Banner.css'
 
 function Banner() {
-    const [isVisible, setIsVisible] = useState(true)
+    // const [isVisible, setIsVisible] = useState(true)
+    const [isVisible, setIsVisible] = useState(false)
 
     // Can easily change announcement text
     const announcement = "🏠 Spring 2025 Applications Now Open! 2nd Round Closes 11/4!"
